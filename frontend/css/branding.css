@@ -1430,6 +1430,7 @@ body .search-field {
 }
 .btn-no-bg:hover{
     color: var(--theme-color) !important;
+    text-decoration: none !important;
 }
 /* TH-BTNS SIZES */
 .btn.sm {
@@ -1475,4 +1476,6 @@ body .search-field {
     color: #fff;
     font-size: var(--th-fs-input);
 }
-
+.shadow{
+    box-shadow: rgb(111 66 193 / 50%) 0px 7px 60px 0px !important;
+}
