@@ -11,6 +11,7 @@
     --theme-font-color: #262626;
     --theme-title-color: #003934;
     --th-font-color:#B8B8B8;
+    --theme-light-text:#BCBCBC;
     --theme-white: #ffffff;
     --theme-color: #6F42C1;
     --theme-color-dark: #003934;
@@ -1113,110 +1114,6 @@ body .search-field {
     background-color: transparent !important;
 }
 
-
-/* ========= ACCORDION ========== */
-
-.th-accordion .accordion-item {
-    border: 1px solid var(--th-bg-light);
-    margin-bottom: 25px;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.th-accordion .accordion-item .accordion-button {
-    border-radius: 8px 8px 0 0;
-}
-.th-accordion .accordion-item:last-of-type {
-    margin-bottom: 0;
-}
-.th-accordion .accordion-item:last-of-type .accordion-button.collapsed {
-    border-width: 1px;
-    border-radius: 16px;
-}
-.th-accordion .accordion-button {
-    border-radius: 0 8px 0 8px;
-    padding: 15px 25px;
-    height: 72px;
-    font-size: 16px;
-    font-weight: var(--th-fw-500);
-    color: var(--th-bg-black);
-    text-transform: uppercase;
-    padding-inline-end: 8px;
-    justify-content: space-between;
-    text-align: left;
-    background: var(--th-bg-light);
-    text-transform: capitalize;
-    position: relative;
-    padding-inline-end: 60px;
-}
-.th-accordion .accordion-button::after {
-    content: "\f067";
-    background-image: none;
-    font-family: "font awesome 5 pro";
-    font-size: 14px;
-    font-weight: 400;
-    height: 28px;
-    width: 28px;
-    border: 1px solid var(--th-bg-black);
-    line-height: 26px;
-    border-radius: 50%;
-    margin-inline-start: 0;
-    margin-inline-end: 18px;
-    text-align: center;
-    color: var(--th-bg-black);
-    position: absolute;
-    inset-inline-end: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.th-accordion .accordion-button:not(.collapsed) {
-    background-color: var(--th-primary-color);
-    color: var(--th-bg-white);
-    box-shadow: none;
-}
-.th-accordion .accordion-button:not(.collapsed)::after {
-    border-color: var(--th-bg-white);
-    background: var(--th-bg-white);
-    content: "\f068";
-    color: var(--th-bg-black);
-}
-.th-accordion .accordion-button:focus {
-    box-shadow: none;
-}
-.th-accordion .accordion-body {
-    padding: 21px 25px 11px;
-}
-.th-accordion .accordion-body p {
-    font-size: 16px;
-}
-
-/*======== Accordion variations ========*/
-.th-accordion.accordion-dark .accordion-button:not(.collapsed) {
-    background-color: var(--th-bg-black);
-    color: var(--th-bg-white);
-    box-shadow: none;
-}
-.th-accordion.accordion-orange .accordion-button:not(.collapsed) {
-    background-color: var(--th-orange-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-yellow .accordion-button:not(.collapsed) {
-    background-color: var(--th-yellow-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-green .accordion-button:not(.collapsed) {
-    background-color: var(--th-green-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-blue .accordion-button:not(.collapsed) {
-    background-color: var(--th-blue-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-gray .accordion-button:not(.collapsed) {
-    background-color: var(--th-gray-color);
-    color: var(--th-bg-white);
-}
-
-
 /* Max Width */
 .mx-w-600 {
     max-width: 600px;
@@ -1478,4 +1375,107 @@ body .search-field {
 }
 .shadow{
     box-shadow: rgb(111 66 193 / 50%) 0px 7px 60px 0px !important;
+}
+
+
+/* ========= ACCORDION ========== */
+
+.th-accordion .accordion-item {
+    border: 0;
+    border-bottom: 1px solid #6F42C1;
+    border-radius: 0px;
+    background-color: transparent;
+    overflow: hidden;
+}
+.th-accordion .accordion-item .accordion-button {
+    border-radius: 8px 8px 0 0;
+}
+.th-accordion .accordion-item:last-of-type {
+    margin-bottom: 0;
+}
+.th-accordion .accordion-item:last-of-type .accordion-button.collapsed {
+    border-width: 1px;
+    border-radius: 16px;
+}
+.th-accordion .accordion-button {
+    border-radius: 0;
+    padding: 15px 0px;
+    height: 72px;
+    font-size: 16px;
+    font-weight: var(--th-fw-500);
+    color: var(--theme-light-text);
+    text-transform: uppercase;
+    padding-inline-end: 8px;
+    justify-content: space-between;
+    text-align: left;
+    background: var(--th-bg-light);
+    text-transform: capitalize;
+    position: relative;
+    padding-inline-end: 60px;
+}
+.th-accordion .accordion-button::after {
+    content: "\f067";
+    background-image: none;
+    font-family: "font awesome 5 pro";
+    font-size: 14px;
+    font-weight: 400;
+    height: 28px;
+    width: 28px;
+    line-height: 26px;
+    border-radius: 50%;
+    margin-inline-start: 0;
+    margin-inline-end: 0px;
+    text-align: center;
+    color: var(--theme-white);
+    position: absolute;
+    inset-inline-end: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.th-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--th-primary-color);
+    color: var(--th-bg-white);
+    box-shadow: none;
+}
+.th-accordion .accordion-button:not(.collapsed)::after {
+    border-color: 0;
+    background: transparent;
+    content: "\f068";
+    color: var(--theme-white);
+}
+.th-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+.th-accordion .accordion-body {
+    padding: 21px 0px 11px;
+}
+.th-accordion .accordion-body p {
+    font-size: 16px;
+}
+
+/*======== Accordion variations ========*/
+.th-accordion.accordion-dark .accordion-button:not(.collapsed) {
+    background-color: var(--th-bg-black);
+    color: var(--th-bg-white);
+    box-shadow: none;
+}
+.th-accordion.accordion-orange .accordion-button:not(.collapsed) {
+    background-color: var(--th-orange-color);
+    color: var(--th-bg-white);
+}
+.th-accordion.accordion-yellow .accordion-button:not(.collapsed) {
+    background-color: var(--th-yellow-color);
+    color: var(--th-bg-white);
+}
+.th-accordion.accordion-green .accordion-button:not(.collapsed) {
+    background-color: var(--th-green-color);
+    color: var(--th-bg-white);
+}
+.th-accordion.accordion-blue .accordion-button:not(.collapsed) {
+    background-color: var(--th-blue-color);
+    color: var(--th-bg-white);
+}
+.th-accordion.accordion-gray .accordion-button:not(.collapsed) {
+    background-color: var(--th-gray-color);
+    color: var(--th-bg-white);
 }

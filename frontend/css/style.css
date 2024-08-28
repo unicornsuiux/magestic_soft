@@ -470,7 +470,7 @@
   transform: scale3d(1.0, 1.0, 1);
   min-height: 430px;
 }
-.owl-carousel .owl-item img {
+.section-testimonail .owl-carousel .owl-item img {
   transform-style: preserve-3d;
   max-width: 90px;
   margin: -79px auto 17px;
