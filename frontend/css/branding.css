@@ -1,11 +1,12 @@
 /**********************************
  	1. Global CSS Start 
  **********************************/
- @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
  :root {
     --th-body-gradient: linear-gradient(270deg, rgba(12,12,11,1) 0%, rgba(41,42,39,1) 74%);
     --theme-title-family: "Inter", sans-serif;
     --theme-theme-family: "Inter", sans-serif;
+    --theme-lato-font: "Lato", sans-serif;
     --theme-main-bg: #ffffff;
     --theme-text-light: #e9d2d2;
     --theme-font-color: #262626;
@@ -370,6 +371,9 @@ textarea {
     50% {
         transform: translateY(0px);
     }
+}
+.list-unstyle{
+    list-style: none;
 }
 .theme_list {
     padding-left: 25px;
@@ -1118,6 +1122,9 @@ body .search-field {
 .mx-w-600 {
     max-width: 600px;
 }
+.mx-w-650 {
+    max-width: 670px;
+}
 .mx-w-750{
     max-width: 750px;
 }
@@ -1311,6 +1318,11 @@ body .search-field {
     background-color: var(--theme-color);
     color: var(--theme-white) !important;
 }
+.btn-border{
+    border: 3px solid #fff;
+    border-radius: var(--th-radius-15);
+    background-color: var(--theme-color);
+}
 .btn.btn-danger{
     background-color: #f74141;
 }
@@ -1322,7 +1334,7 @@ body .search-field {
 }
 .btn-no-bg{
     color: var(--theme-white);  
-    font-size: var(--th-font16);
+    font-size: var(--th-font18);
     transition: all .3s ease;
 }
 .btn-no-bg:hover{
@@ -1377,30 +1389,38 @@ body .search-field {
     box-shadow: rgb(111 66 193 / 50%) 0px 7px 60px 0px !important;
 }
 
+/* BORDER */
+
+.bb-2{
+    border-bottom: 2px solid var(--theme-main-bg);
+}
+
 
 /* ========= ACCORDION ========== */
-
-.th-accordion .accordion-item {
+.ms-accordion{
+    padding-top: 40px;
+}
+.ms-accordion .accordion-item {
     border: 0;
     border-bottom: 1px solid #6F42C1;
     border-radius: 0px;
     background-color: transparent;
     overflow: hidden;
 }
-.th-accordion .accordion-item .accordion-button {
+.ms-accordion .accordion-item .accordion-button {
     border-radius: 8px 8px 0 0;
 }
-.th-accordion .accordion-item:last-of-type {
+.ms-accordion .accordion-item:last-of-type {
     margin-bottom: 0;
 }
-.th-accordion .accordion-item:last-of-type .accordion-button.collapsed {
+.ms-accordion .accordion-item:last-of-type .accordion-button.collapsed {
     border-width: 1px;
     border-radius: 16px;
 }
-.th-accordion .accordion-button {
+.ms-accordion .accordion-button {
     border-radius: 0;
     padding: 15px 0px;
-    height: 72px;
+    height: 55px;
     font-size: 16px;
     font-weight: var(--th-fw-500);
     color: var(--theme-light-text);
@@ -1413,7 +1433,7 @@ body .search-field {
     position: relative;
     padding-inline-end: 60px;
 }
-.th-accordion .accordion-button::after {
+.ms-accordion .accordion-button::after {
     content: "\f067";
     background-image: none;
     font-family: "font awesome 5 pro";
@@ -1426,56 +1446,30 @@ body .search-field {
     margin-inline-start: 0;
     margin-inline-end: 0px;
     text-align: center;
-    color: var(--theme-white);
+    color: var(--theme-color);
     position: absolute;
     inset-inline-end: 0px;
     top: 50%;
     transform: translateY(-50%);
 }
-.th-accordion .accordion-button:not(.collapsed) {
-    background-color: var(--th-primary-color);
-    color: var(--th-bg-white);
+.ms-accordion .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--theme-light-text);
     box-shadow: none;
 }
-.th-accordion .accordion-button:not(.collapsed)::after {
+.ms-accordion .accordion-button:not(.collapsed)::after {
     border-color: 0;
     background: transparent;
     content: "\f068";
-    color: var(--theme-white);
+    color: var(--theme-color);
 }
-.th-accordion .accordion-button:focus {
+.ms-accordion .accordion-button:focus {
     box-shadow: none;
 }
-.th-accordion .accordion-body {
+.ms-accordion .accordion-body {
     padding: 21px 0px 11px;
+    color: var(--theme-light-text);
 }
-.th-accordion .accordion-body p {
+.ms-accordion .accordion-body p {
     font-size: 16px;
-}
-
-/*======== Accordion variations ========*/
-.th-accordion.accordion-dark .accordion-button:not(.collapsed) {
-    background-color: var(--th-bg-black);
-    color: var(--th-bg-white);
-    box-shadow: none;
-}
-.th-accordion.accordion-orange .accordion-button:not(.collapsed) {
-    background-color: var(--th-orange-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-yellow .accordion-button:not(.collapsed) {
-    background-color: var(--th-yellow-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-green .accordion-button:not(.collapsed) {
-    background-color: var(--th-green-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-blue .accordion-button:not(.collapsed) {
-    background-color: var(--th-blue-color);
-    color: var(--th-bg-white);
-}
-.th-accordion.accordion-gray .accordion-button:not(.collapsed) {
-    background-color: var(--th-gray-color);
-    color: var(--th-bg-white);
 }

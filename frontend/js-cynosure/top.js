@@ -7,8 +7,8 @@ document.write('<link rel="preconnect" href="https://fonts.googleapis.com">');
 document.write('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>');
 document.write('<link rel="stylesheet" href="./frontend/owl/owl.carousel.min.css">');
 document.write('<link rel="stylesheet" href="./frontend/owl/owl.theme.default.min.css">');
-document.write('<link rel="stylesheet" href="./frontend/css/font-awesome-pro.css">');
 document.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />');
+document.write('<link rel="stylesheet" href="./frontend/css/font-awesome-pro.css">');
 document.write('<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">');
 document.write('<link rel="stylesheet" href="./frontend/css/style.css">');
 document.write('<link rel="stylesheet" href="./frontend/css/media-queris.css">')

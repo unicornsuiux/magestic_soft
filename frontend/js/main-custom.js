@@ -302,7 +302,7 @@ jQuery(document).ready(function($) {
         items: 3,
         margin: 0,
         autoplay: true,
-        dots:true,
+        dots:false,
         autoplayTimeout: 8500,
         smartSpeed: 450,
         responsive: {
