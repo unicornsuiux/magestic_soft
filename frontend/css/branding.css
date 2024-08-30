@@ -3,7 +3,7 @@
  **********************************/
  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
  :root {
-    --th-body-gradient: linear-gradient(270deg, rgba(12,12,11,1) 0%, rgba(41,42,39,1) 74%);
+    --th-body-gradient: #20221F;
     --theme-title-family: "Inter", sans-serif;
     --theme-theme-family: "Inter", sans-serif;
     --theme-lato-font: "Lato", sans-serif;
@@ -1052,6 +1052,11 @@ body .search-field {
         font-size: var(--th-font18) !important;
     }
 }
+@media only screen and (max-width: 450px) {
+    .fs-20 {
+        font-size: var(--th-font16) !important;
+    }
+}
 .text-thin {
     letter-spacing: 3.2px;
     font-size: 16px;
@@ -1299,8 +1304,8 @@ body .search-field {
     line-height: var(--th-btn-line-height);
     border-radius: var(--th-radius-10);
     overflow: hidden;
-    -webkit-transition: all 0.9s ease-in-out;
-    transition: all 0.9s ease-in-out;
+    -webkit-transition: all 0.9s ease;
+    transition: all 1s ease;
     cursor: pointer;
     min-width: 200px;
 }
@@ -1420,7 +1425,6 @@ body .search-field {
 .ms-accordion .accordion-button {
     border-radius: 0;
     padding: 15px 0px;
-    height: 55px;
     font-size: 16px;
     font-weight: var(--th-fw-500);
     color: var(--theme-light-text);
@@ -1472,4 +1476,7 @@ body .search-field {
 }
 .ms-accordion .accordion-body p {
     font-size: 16px;
+}
+.pb_0{
+    padding-bottom: 0 !important;
 }

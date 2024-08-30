@@ -242,9 +242,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 $('.technologies-slider').owlCarousel({
     loop: true,
-    margin: 50,
+    margin: 0,
     nav: false,
-    dots:true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout:3000,
+    animateIn:'linear',
+    animateOut:'linear',
+    smartSpeed:3000,
     responsive: {
         0: {
             items: 2
@@ -265,14 +270,23 @@ $('.services_silder').owlCarousel({
     loop: true,
     margin: 40,
     nav: false,
+    dots:false,
+    autoplay: true,
+    autoplayTimeout:3000,
+    animateIn:'linear',
+    animateOut:'linear',
+    smartSpeed:3000,
     responsive: {
         0: {
             items: 1
         },
         600: {
-            items: 2
+            items: 1.5
         },
         1000: {
+            items: 2.5
+        },
+        1200: {
             items: 3.5
         }
     }
