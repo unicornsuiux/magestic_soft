@@ -1319,6 +1319,9 @@ body .search-field {
 .btn-outline{
     background-color: rgba(33, 34, 33, 0.19);
 }
+.btn-outline-gray{
+    background-color: rgba(217, 217, 217, 33%);
+}
 .btn-outline:hover{
     background-color: var(--theme-color);
     color: var(--theme-white) !important;
