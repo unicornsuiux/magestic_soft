@@ -513,11 +513,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 170px 0;
+  padding: 190px 0;
   position: relative;
-}
-  
-.process-item::after{
+} 
+.process-wrap::after{
   content: "";
   position: absolute;
   width: 100%;
@@ -541,33 +540,181 @@
   justify-content: center;
   height: 100%;
 }
+.process-item{
+  position: relative;
+}
 .process-item-content{
   border: 4px solid #824BC5;
   border-radius: var(--th-radius-20);
-  overflow: hidden;
+  background-color: rgba(182, 182, 182, 0.23);
   max-width: 300px;
+  width: 300px;
   position: absolute;
 }
-.process-wrap .process-item:nth-child(1) .process-item-content{
-  top: 0;
+.process-item-content .process-content-inner{
+  border-radius: var(--th-radius-20);
+  
+}
+.process-item-content .arrow{
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 23px;
+  height: 11px;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  background: rgb(111,66,193);
+  background: linear-gradient(180deg, rgb(130 75 197) 0%, rgba(225,119,208,1) 100%);
+}
+.process-item-1 .arrow,
+.process-item-3 .arrow{
+  bottom: -14px;
+  left: 29px;
+}
+.process-item-2 .arrow,
+.process-item-4 .arrow{
+  top: -14px;
+  left: 29px;
+  transform: rotate(180deg);
+}
+.process-item-1 .process-item-content{
   left: 0;
+  top: -175px;
 }
-.process-wrap .process-item:nth-child(2) .process-item-content{
-  bottom: 0;
+.process-item-2 .process-item-content{
   left: 0;
+  bottom: -175px;
 }
-.process-wrap .process-item:nth-child(3) .process-item-content{
-  top: 0;
-  right: 0;
+.process-item-3 .process-item-content{
+  left: 0;
+  top: -175px;
 }
-.process-wrap .process-item:nth-child(4) .process-item-content{
-  bottom: 0;
-  right: 0;
+.process-item-4 .process-item-content{
+  left: 0;
+  bottom: -175px;
 }
 .process-content-inner{
   padding: 20px;
-  background-color: rgba(182, 182, 182, 0.23);
 }
 .process-item-content p{
   color: var(--theme-main-bg);
+}
+.section-process{
+  position: relative;
+}
+body{
+  overflow-x: hidden;
+}
+.section-process::after{
+  content: "";
+  background-image: url(../img/shaps/radienl-gradient.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+.ms-tag{
+  background-color: #EAEAEA;
+  color: var(--theme-black);
+  border-radius: var(--th-radius-30);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 4px 11px;
+  transition: all .2s ease;
+}
+.ms-tag:hover{
+  background-color: #3C2D58;
+}
+.ms-tag span{
+  font-size: 16px;
+  transition: all .2s ease;
+}
+.ms-tag:hover span{
+  color: #fff;
+}
+.tags-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+/* SECTION CONTACT */
+.contact-wrap{
+  border-radius: var(--th-radius-25);
+  border: 2px solid #6F42C1;
+  background-color: rgba(82, 82, 82, 38%);
+  padding: 80px 60px 50px 80px;
+}
+.contact-inner{
+  background-color: var(--theme-color);
+  border: 2px solid #e177d1;
+  border-radius: var(--th-radius-40);
+  padding: 70px 40px 20px 40px;
+  position: relative;
+  margin-top: -120px;
+}
+.contact-inner p{
+  color: var(--th-font-color);
+}
+.info-wrap{
+  padding-top: 50px;
+}
+.info-item{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.info-item img{
+  width: 40px;
+  height: 40px;
+}
+.info-item a{
+  font-size: 23px;
+  color: var(--theme-white);
+}
+.contact-inner .socail-wrap{
+  padding: 90px 0 0 0;
+}
+/* SECTION-NEWS */
+.ms-card{
+  position: relative;
+  background-color: var(--theme-white);
+  border-radius: 15px;
+  padding: 20px;
+}
+.ms-card-img{
+  height: 290px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.ms-card-content .title{
+  color: var(--theme-font-color);
+}
+.ms-card-info{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid #01060f45;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.ms-card-info li{
+  font-size: 14px;
+  color: #01060F;
+}
+.ms-card-bottom h5{
+  color: #01060F;
+  font-size: 14px;
+}
+.ms-card-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

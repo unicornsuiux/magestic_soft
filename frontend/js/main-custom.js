@@ -307,6 +307,58 @@ $('.partner_slider').owlCarousel({
         }
     }
 });
+$('.journey_slider').owlCarousel({
+    stagePadding: 200,
+    loop: true,
+    margin: 70,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout:3000,
+    animateIn:'linear',
+    animateOut:'linear',
+    smartSpeed:3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1.5
+        },
+        768: {
+            items: 2.5
+        },
+        1000: {
+            items: 3
+        }
+    }
+});
+$('.new_slider').owlCarousel({
+    // loop: true,
+    center:true,
+    margin: 70,
+    nav: false,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout:3000,
+    animateIn:'linear',
+    animateOut:'linear',
+    smartSpeed:3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1.5
+        },
+        768: {
+            items: 2.5
+        },
+        1000: {
+            items: 2.8
+        }
+    }
+});
 
 jQuery(document).ready(function($) {
     "use strict";
