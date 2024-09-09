@@ -359,6 +359,32 @@ $('.new_slider').owlCarousel({
         }
     }
 });
+$('.projects_slider').owlCarousel({
+    loop: true,
+    margin: 70,
+    nav: true,
+    dots: false,
+    // autoplay: true,
+    // autoplayTimeout:3000,
+    // animateIn:'linear',
+    // animateOut:'linear',
+    smartSpeed:3000,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1.5
+        },
+        768: {
+            items: 2
+        },
+        1000: {
+            items: 2.8
+        }
+    }
+});
+
 
 jQuery(document).ready(function($) {
     "use strict";

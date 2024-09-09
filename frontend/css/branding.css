@@ -13,6 +13,7 @@
     --theme-black:#000000;
     --theme-title-color: #003934;
     --th-font-color:#B8B8B8;
+    --th-card-dark:#343A40;
     --theme-light-text:#BCBCBC;
     --theme-white: #ffffff;
     --theme-color: #6F42C1;
@@ -1060,6 +1061,9 @@ body .search-field {
 /* FONT SIZE CLASS */
 .fs_10 {
     font-size: var(--th-font10);
+}
+.fs-12 {
+    font-size: var(--th-font12);
 }
 .fs-14 {
     font-size: var(--th-font14);
