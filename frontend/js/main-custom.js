@@ -246,10 +246,10 @@ $('.technologies-slider').owlCarousel({
     nav: false,
     dots: false,
     autoplay: true,
-    autoplayTimeout:3000,
-    animateIn:'linear',
-    animateOut:'linear',
-    smartSpeed:3000,
+    slideTransition: "linear",
+    autoplayTimeout: 5000,
+    autoplaySpeed: 5000,
+    autoplayHoverPause: true,
     responsive: {
         0: {
             items: 2
@@ -272,10 +272,10 @@ $('.services_silder').owlCarousel({
     nav: false,
     dots:false,
     autoplay: true,
-    autoplayTimeout:3000,
-    animateIn:'linear',
-    animateOut:'linear',
-    smartSpeed:3000,
+    slideTransition: "linear",
+    autoplayTimeout: 4000,
+    autoplaySpeed:4000,
+    autoplayHoverPause: true,
     responsive: {
         0: {
             items: 1
@@ -308,7 +308,7 @@ $('.partner_slider').owlCarousel({
     }
 });
 $('.journey_slider').owlCarousel({
-    stagePadding: 200,
+
     loop: true,
     margin: 70,
     nav: false,
@@ -320,16 +320,19 @@ $('.journey_slider').owlCarousel({
     smartSpeed:3000,
     responsive: {
         0: {
-            items: 1
+            margin: 10,
+            items: 1.2
         },
         600: {
+            margin: 30,
             items: 1.5
         },
         768: {
-            items: 2.5
+            items: 2.5,
+            margin: 50
         },
         1000: {
-            items: 3
+            items: 3.5,
         }
     }
 });
@@ -346,10 +349,12 @@ $('.new_slider').owlCarousel({
     smartSpeed:3000,
     responsive: {
         0: {
-            items: 1
+            items: 1.2,
+            margin: 10
         },
         600: {
-            items: 1.5
+            items: 1.5,
+            margin: 30
         },
         768: {
             items: 2.5
@@ -364,19 +369,22 @@ $('.projects_slider').owlCarousel({
     margin: 70,
     nav: true,
     dots: false,
-    // autoplay: true,
-    // autoplayTimeout:3000,
-    // animateIn:'linear',
-    // animateOut:'linear',
+    autoplay: true,
+    autoplayTimeout:3000,
+    animateIn:'linear',
+    animateOut:'linear',
     smartSpeed:3000,
     responsive: {
         0: {
+            margin: 10,
             items: 1
         },
         600: {
+            margin: 20,
             items: 1.5
         },
         768: {
+            margin: 40,
             items: 2
         },
         1000: {
@@ -389,10 +397,10 @@ $('.team_slider').owlCarousel({
     margin: 10,
     nav: true,
     dots: false,
-    // autoplay: true,
-    // autoplayTimeout:3000,
-    // animateIn:'linear',
-    // animateOut:'linear',
+    autoplay: true,
+    autoplayTimeout:3000,
+    animateIn:'linear',
+    animateOut:'linear',
     smartSpeed:3000,
     responsive: {
         0: {
@@ -405,6 +413,9 @@ $('.team_slider').owlCarousel({
             items: 2
         },
         1000: {
+            items: 3
+        },
+        1200: {
             items: 4
         }
     }
@@ -474,4 +485,26 @@ window.addEventListener("resize", () => {
       navbarMenu.classList.remove("is-active");
     }
   }
+});
+
+
+$(document).ready(function(){
+    $(".dropdown-toggle").click(function(){
+        var dropdownMenu = $(this).next(".dropdown_menu");
+
+        // Check if the dropdown is visible and toggle the slide effect
+        if (dropdownMenu.is(":visible")) {
+            dropdownMenu.slideUp(300); // Slide up to close
+        } else {
+            $(".dropdown_menu").slideUp(300); // Close all other dropdowns
+            dropdownMenu.slideDown(300); // Slide down to open
+        }
+    });
+
+    // Close the dropdown if the user clicks outside of it
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.drop_down').length) {
+            $(".dropdown_menu").slideUp(300);
+        }
+    });
 });

@@ -39,7 +39,7 @@
     margin-left: 0;
   }
   .parent{
-    grid-row-gap: 10px;
+    grid-row-gap: 30px;
     grid-template-rows:auto;
   }
   .portfolio-item1 {
@@ -49,14 +49,45 @@
   .portfolio-item3,
   .portfolio-item4,
   .portfolio-item5,
-  .portfolio-item6 {
+  .portfolio-item6,
+  .portfolio-item7,
+  .portfolio-item8,
+  .portfolio-item9,
+  .portfolio-item10,
+  .portfolio-item11 {
     grid-area: auto / span 5 / auto / span 5;
+  }
+  .portfolio-img-wrap{
+    height: auto;
   }
   .footer-bottom .w-50{
     width: 100% !important;
   }
 }
+@media only screen and (max-width:1024px){
+  .process-item-2 .process-item-content,
+  .process-item-4 .process-item-content{
+    left: unset;
+    right: 0;
+  }
+  .process-item-2 .arrow,
+  .process-item-4 .arrow{
+    left: unset;
+    right: 29px;
+  }
+}
 @media only screen and (max-width:992px){
+  .header{
+    position: fixed;
+    padding: 20px 35px;
+  }
+  .header.on-scroll{
+    background-color: #20221f;
+  }
+  .dropdown_menu{
+    top: 68px !important;
+    left: -84px !important;
+  }
   .header-action{
     display: none;
   }
@@ -64,19 +95,54 @@
     flex-direction: row-reverse;
     justify-content: space-between;
   }
+  .menu-inner{
+    background-color: transparent;
+    border: 0;
+  }
+  .section-master {
+    padding-top: 150px;
+  }
+  .header::after{
+    height: 200px;
+  }
+  .contact-wrap {
+    padding: 68px 40px 50px 44px;
+  }
+  .vertical-group-img{
+    flex-direction: row;
+    gap: 0;
+  }
+  .vertical-group-img .top{
+    width: 100px;
+    height: 100px;
+  }
+  .vertical-group-img .center{
+    width: 150px;
+    height: 200px;
+  }
+  .vertical-group-img .end{
+    width: 100px;
+    height: 100px;
+  }
 }
 @media only screen and (max-width:767px){
-  .header{
-    padding: 35px 20px 0 15px;
-  }
   .brand {
     width: 176px;
   }
-  .section-master{
-    padding-top: 40px;
-  }
   .master-content{
     padding-top: 20px;
+  }
+  .process-item-content{
+    width: 236px;
+  }
+  .tech-icon-overlap,
+  .tech-icon-overlap.left {
+    width: 60px;
+    height: 60px;
+  }
+  .line-img::after, .line-img::before {
+    width: 156px;
+    height: 52px;
   }
   .parent {
     grid-template-columns: 1fr;
@@ -84,13 +150,17 @@
     grid-column-gap: 0;
     grid-row-gap: 50px;
   }
-
   .portfolio-item1,
   .portfolio-item2, 
   .portfolio-item3,
   .portfolio-item4,
   .portfolio-item5,
-  .portfolio-item6 {
+  .portfolio-item6,
+  .portfolio-item7,
+  .portfolio-item8,
+  .portfolio-item9,
+  .portfolio-item10,
+  .portfolio-item11 {
     grid-area: auto / 1 / auto / -1;
   }
   .portfolio-card{
@@ -101,6 +171,9 @@
   }
 }
 @media only screen and (max-width:575px){
+  .header{
+    padding: 20px 15px;
+  }
   .btn-in-input{
     gap: 10px;
     flex-direction: column;
@@ -110,5 +183,89 @@
   }
   .section-footer .btn-no-bg{
     font-size: var(--th-font14);
+  }
+  .g-btn .btn{
+    width: 100%;
+  }
+  .owl-carousel .owl-nav{
+    position: unset;
+    transform: translate(0);
+    justify-content: center;
+  }
+  .team_slider{
+    padding: 0;
+  }
+  .footer-link{
+    flex-wrap: wrap;
+  }
+  .contact-inner {
+    padding: 70px 20px 18px 20px;
+  }
+  .info-item img{
+    width: 20px;
+    height: 20px;
+  }
+  .info-item a{
+    font-size: 17px;
+  }
+  .process-wrap::after{
+    display: none;
+  }
+  .process-block{
+    width: 60px;
+    height: 60px;
+    padding: 11px;
+  }
+  .process-wrap{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+    padding: 40px 0px;
+  }
+  .process-item .process-item-content{
+    position: relative;
+    top: unset !important;
+    left: unset !important;
+    right: unset !important;
+    bottom: unset !important;
+    width: 100%;
+    max-width: 100%;
+  }
+  .process-item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .process-item-2,
+  .process-item-4{
+    align-self: end;
+    flex-direction: row-reverse;
+  }
+  .process-item-1 .arrow, .process-item-3 .arrow {
+    top: 50%;
+    left: -20px;
+    transform: rotate(91deg);
+  }
+  .process-item-2 .arrow, .process-item-4 .arrow {
+    left: unset;
+    right: -20px;
+    top: 50%;
+    transform: rotate(-90deg);
+  }
+  .services-silder .item:hover,
+  .journey-slider .item:hover{
+    transform: scale(1.03);
+  }
+  .projects-container{
+    width: 100%;
+  }
+  .projects-container-row.owl-carousel .owl-nav{
+    left: 0;
+  }
+  .line-img::after, .line-img::before {
+    display: none;
+  }
+  .projects-container .owl-stage-outer{
+    padding: 65px 10px 65px 10px;
   }
 }

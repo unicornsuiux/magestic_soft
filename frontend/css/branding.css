@@ -1049,8 +1049,16 @@ body .search-field {
 }
 /* TEXT COLORS */
 .text-shaded{
-    background: rgb(255,255,255);
+    background: #6f42c1;
     background: linear-gradient(80deg, rgba(255,255,255,1) 32%, rgba(129,129,129,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.text-shaded-white{
+    background:#6f42c1;
+    background: linear-gradient(80deg, #6f42c1 32%, rgba(212, 212, 212, 0.834) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
